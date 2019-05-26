@@ -1,32 +1,40 @@
-# Twitter Clone
-# Project Setup
-The project backend has been implmented using Django-Rest-Framework and database used is RDBMS (MySQL). The code has been properly tested, and written in a generic manner.
-Steps to setup the project on your machine- 
-1) Create a virtual environment using command - 
->         virtualenv venv -p python3
-2) Activate virtual environment using command - 
->         source venv/bin/activate
-3) Install requirements using command -
->         pip install -r requirements.txt
-4) Now make migrations of project using command - 
->         python manage.py makemigrations && python manage.py migrate
-5) Run Django server using command - 
->         python manage.py runserver                   
-All ready to go !
+# Competitive-Programming-Setup
+This repository contains my setup for competitive programming competitions.
 
-# List of APIs and their functionalities
-API | Request Body | Method | Description | Response
-|---|---|---|---|---|
-| [/rest_auth/signup/] | (first_name, last_name, username, password, email, contact_number(in +91 format), country_code) | POST | User Sign up  | Authentication Token
-| [/rest_auth/login/] | (username, password) | POST | User Login | Authentication Token
-| [/rest_auth/logout/] | No | GET | Logout User | No
-| [/tweets/tweet/] | (attachments[Multiple], description) | POST | Post tweet with attachments | Tweet
-| [/tweets/tweet/[Tweet_id]/] | No | GET | Retrieve Tweet Info | Tweet
-| [/tweets/tweet/[Tweet_id]/] | No | DELETE | Delete Tweet | No
-| [/tweets/tweet/user/[User_id]/] | No | GET | Get list of user's tweets | [Tweets]
-| [/tweets/attachment/[Attachment_id]/] | No | GET | Get attachment details | Attachment
-| [/tweets/follow/[User_id]/] | (is_follow) | PUT | Follow/Unfollow a User | No
-| [/tweets/tweet/like/[Tweet_id]/] | (is_like) | PUT | Like/Unlike a Tweet | No
-| [/rest_auth/user/[User_id]/] | No | GET | Get user's details | User
-| [/tweets/tweet/retweet/[Tweet_id]/] | (comment) | POST | Retweet a tweet | No
-| [/tweets/tweet/retweet/user/[User_id]/] | No | GET | Get user's retweets | [Retweets]
+Below is a brief description of the files:
+
+* code_template.cpp
+> It contains my template used for writing programs. Some utility functions used in almost all programs, included fast I/O routines are available in this.
+
+* check.cpp
+> It contains the brute force solution or the correct solution against which I want to debug my code.
+
+* work.cpp
+> It is the file where I write my own code for the problem.
+
+* inp_generator.cpp
+> It contains the random input file generator the problem.
+
+* output_checker.cpp
+> It compares the output of 2 files letter by letter (namely res.txt and out.txt) and outputs whether both the files are exactly same or not.
+
+* precision_checker.cpp
+> It contains the output checking process when the files (namely res.txt and out.txt) contains double or floating-point numbers and the answers is considered correct within some desired error.
+
+* automate.sh
+> It is a bash script to automate the process of debugging 2 codes against each other when exact test files should match.
+
+* automate_p.sh
+> It is a bash script to automate the process of 2 debugging 2 codes against each other when the test files should match within some error limit.
+
+* stack_limit.cpp
+> It contains a small code snippet used to increase the stack limit on the Judge.
+
+* timer.cpp
+> It contains a small code snippet to print the time taken by the program to execute the given test case data.
+
+* java_template.java
+> It conatins the code template for java solutions.
+
+* python_template.py
+> It conatins the code template for python solutions.
